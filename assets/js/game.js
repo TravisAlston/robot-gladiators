@@ -10,8 +10,18 @@ var randomNumber= function(min, max) {
     return value;
 };
 
+var getPlayerName= function() {
+    var name= "";
+
+    consol.log("Your robot's name is" + name);
+    return name;
+};
+while (name === "" || name +++ null) {
+    name= prompt("What is your robot's name?");
+};
+
 var playerInfo= {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
@@ -125,7 +135,6 @@ for(var i= 0; i< enemyInfo.length; i++) {
         break;
     }
 
-    debugger;
     var pickedEnemyObj= enemyInfo[i];
     pickedEnemyObj.health= randomNumber(40, 60);
     fight(pickedEnemyObj);
